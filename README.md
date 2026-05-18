@@ -3,50 +3,54 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=microsoftpowerbi&logoColor=black)
 
 ## 📌 Deskripsi Proyek
 Proyek ini bertujuan untuk mendeteksi risiko **Burnout** (kelelahan kerja) pada karyawan secara otomatis menggunakan algoritma **Machine Learning**. Sistem ini mengklasifikasikan karyawan ke dalam tiga tingkat risiko: **Low**, **Medium**, atau **High** berdasarkan pola jam kerja, tingkat stres, dan kualitas tidur.
 
 Analisis ini membantu perusahaan melakukan deteksi dini agar kesejahteraan mental karyawan tetap terjaga sebelum produktivitas menurun.
 
-## 📊 Dataset Overview
-Dataset yang digunakan (`mental_health_productivity.csv`) mencakup indikator seperti:
-- **Stress Level:** Skala stres karyawan (1-10).
-- **Work Hours Per Week:** Total jam kerja dalam seminggu.
-- **Sleep Hours:** Rata-rata waktu tidur harian.
-- **Mental Health Support Access:** Akses ke dukungan kesehatan mental.
-- **Burnout Risk (Target):** Kategori risiko yang ingin diprediksi.
+---
+
+## 📊 Visualisasi Data (Power BI Dashboard)
+Selain pemodelan prediktif, proyek ini mencakup analisis visual interaktif untuk memahami korelasi antar faktor kesehatan mental karyawan.
+
+### 1. Mental Health Overview
+Dashboard ini memberikan gambaran umum mengenai tingkat stres, produktivitas, dan risiko burnout berdasarkan mode kerja karyawan.
+![Mental Health Overview](dashboard/mental%20health%20overview.png)
+
+### 2. Physical Health & Lifestyle Analysis
+Dashboard ini menganalisis bagaimana faktor gaya hidup seperti durasi tidur dan aktivitas fisik berdampak langsung pada tingkat stres karyawan.
+![Physical Health Analysis](dashboard/physical%20health%20analysis.png)
+
+---
+
+## 📉 Temuan Utama (Insights)
+Berdasarkan hasil visualisasi dan pemodelan menggunakan **Random Forest**:
+*   **Korelasi Stres & Produktivitas:** Terdapat ambang batas stres tertentu di mana produktivitas mulai menurun secara signifikan saat risiko burnout meningkat ke level "High".
+*   **Pola Tidur:** Karyawan dengan rata-rata tidur yang rendah memiliki kecenderungan tingkat stres yang lebih tinggi secara konsisten.
+*   **Beban Kerja:** Karyawan dengan kategori *Overworked* (>50 jam/minggu) mendominasi kategori risiko burnout tinggi.
+*   **Faktor Pendukung:** Akses ke dukungan kesehatan mental memiliki korelasi positif terhadap stabilitas performa karyawan.
+
+---
 
 ## 🚀 Cara Menjalankan Proyek
-Untuk mencoba program ini di komputer Anda sendiri, ikuti langkah mudah berikut:
+Untuk mencoba analisis ini, Anda bisa mengikuti langkah berikut:
 
-1.  **Unduh File Utama:**
-    Download dua file berikut dari repository ini:
-    *   `klasifikasi_burnout_risk.py` (Script Python Utama)
-    *   `mental_health_productivity.csv` (Dataset)
-2.  **Letakkan dalam Satu Folder:**
-    Pastikan kedua file tersebut berada di **folder yang sama**.
-3.  **Instal Library (Jika Belum Ada):**
-    Buka terminal/command prompt dan jalankan perintah:
+1.  **Siapkan Dataset:**
+    Gunakan file `mental_health_productivity.csv` yang tersedia di repository ini.
+2.  **Jalankan Notebook:**
+    Buka file `Klasifikasi_Burnout_Risk.ipynb` menggunakan Jupyter Notebook atau Google Colab.
+3.  **Instal Library:**
+    Jika menjalankan secara lokal, pastikan sudah menginstal library yang diperlukan:
     ```bash
     pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn
     ```
-4.  **Jalankan Program:**
-    Ketik perintah berikut di terminal:
-    ```bash
-    python klasifikasi_burnout_risk.py
-    ```
-
-## 🔍 Temuan Utama (Insights)
-Berdasarkan hasil pemodelan menggunakan **Random Forest** dan teknik **SMOTE**:
-*   **Stress Level** adalah faktor paling dominan yang menentukan apakah seseorang berisiko tinggi mengalami burnout.
-*   **Sleep Hours** yang rendah berkontribusi besar terhadap peningkatan risiko kelelahan kerja.
-*   Model ini mampu memberikan **prediksi otomatis** untuk membantu HRD mengambil tindakan pencegahan lebih awal.
 
 ---
 
 ### 👨‍💻 Disusun Oleh:
-**[Annisa Tristanti]**
+**Annisa Tristanti**
 
 🔗 **Mari Terkoneksi di LinkedIn:**
 [Klik di Sini untuk Profil LinkedIn Saya](https://www.linkedin.com/in/annisatristanti/)
